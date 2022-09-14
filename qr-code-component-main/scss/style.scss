@@ -1,0 +1,49 @@
+@import 'base/resets', 'base/typography', 'utils/variables';
+
+body {
+    background-color: $light-gray;
+}
+
+.card {
+    width: 18.75rem;
+    text-align: center;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px 1px rgba($color: #000000, $alpha: 0.05);
+
+    .qr-code-img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    div {
+        padding: 0.25rem 0;
+
+        .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: $dark-blue;
+            margin: 1rem;
+        }
+
+        .description {
+            font-size: 0.9375rem;
+            font-weight: 400;
+            color: $grayish-blue;
+            margin: 1rem;
+        }
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
