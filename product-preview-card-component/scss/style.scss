@@ -28,6 +28,10 @@ body {
         flex-direction: column;
         justify-content: center;
 
+        .product-name {
+            max-width: 10ch;
+        }
+
         .new-price {
             &::after {
                 content: '$169.99';

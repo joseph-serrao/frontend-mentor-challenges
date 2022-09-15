@@ -9,10 +9,33 @@
 body {
   font-family: "Montserrat", sans-serif;
   text-align: left;
+  font-size: 0.875rem;
+}
+
+.product-type {
+  color: hsl(228deg, 12%, 48%);
+  font-size: 0.6875rem;
+  letter-spacing: 0.25rem;
 }
 
 .product-name, .new-price {
   font-family: "Fraunces", serif;
+  font-size: 1.75rem;
+  color: hsl(212deg, 21%, 14%);
+}
+
+.product-desc {
+  color: hsl(228deg, 12%, 48%);
+  line-height: 1.5;
+}
+
+.new-price {
+  color: hsl(158deg, 36%, 37%);
+}
+.new-price::after {
+  font-size: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
 }
 
 body {
@@ -39,6 +62,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.card .product-details .product-name, .card .product-details .new-price {
+  max-width: 10ch;
 }
 .card .product-details .new-price::after {
   content: "$169.99";
