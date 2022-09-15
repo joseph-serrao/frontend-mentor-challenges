@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.product-name, .new-price {
+  font-family: "Fraunces", serif;
+}
+
+body {
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.card {
+  width: 40rem;
+  background-color: hsl(0deg, 0%, 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .product-img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
