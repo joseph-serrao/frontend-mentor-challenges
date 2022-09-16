@@ -22,6 +22,9 @@ body {
   font-family: "Fraunces", serif;
   font-size: 1.75rem;
   color: hsl(212deg, 21%, 14%);
+  max-width: 10ch;
+  line-height: 1;
+  margin: 1.5rem 0;
 }
 
 .product-desc {
@@ -70,19 +73,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 .card .product-img {
   width: 17.5rem;
+  border-radius: 0.625rem 0 0 0.625rem;
 }
 .card .product-details {
   padding: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-.card .product-details .product-name, .card .product-details .new-price {
-  max-width: 10ch;
 }
 .card .product-details .new-price::after {
   content: "$169.99";

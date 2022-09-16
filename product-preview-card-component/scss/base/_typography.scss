@@ -17,6 +17,9 @@ body {
     font-family: $serif-font-family;
     font-size: 1.75rem;
     color: map-get($neutral, very-dark-blue);
+    max-width: 10ch;
+    line-height: 1;
+    margin: 1.5rem 0;
 }
 
 .product-desc {
