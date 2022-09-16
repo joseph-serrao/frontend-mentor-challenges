@@ -37,3 +37,25 @@ body {
         }
     }
 }
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        width: 20.25rem;
+
+        .product-img {
+            width: 100%;
+            content: url("../images/image-product-mobile.jpg");
+            border-radius: 0.625rem 0.625rem 0 0;
+        }
+
+        .product-type {
+            margin-top: 0.5rem;
+        }
+
+        .product-name {
+            margin: 1rem 0;
+            max-width: 100%;
+        }
+    }
+}
