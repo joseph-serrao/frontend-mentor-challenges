@@ -17,10 +17,10 @@ body {
     align-items: center;
     border-radius: 0.625rem;
 
-
     .product-img {
-        width: 17.5rem;
         border-radius: 0.625rem 0 0 0.625rem;
+        max-width: 17.5rem;
+        width: 17.5rem;
     }
 
     .product-details {
@@ -28,24 +28,17 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        .new-price {
-            &::after {
-                content: '$169.99';
-                text-decoration: line-through;
-            }
-        }
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .card {
         flex-direction: column;
         width: 20.25rem;
 
         .product-img {
+            max-width: 100%;
             width: 100%;
-            content: url("../images/image-product-mobile.jpg");
             border-radius: 0.625rem 0.625rem 0 0;
         }
 

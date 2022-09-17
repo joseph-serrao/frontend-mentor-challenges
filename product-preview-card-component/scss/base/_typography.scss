@@ -24,7 +24,6 @@ body {
 
 .product-desc {
     color: map-get($neutral, dark-grayish-blue);
-    line-height: 1.5;
 }
 
 .new-price {
@@ -32,8 +31,13 @@ body {
     color: map-get($primary, dark-cyan);
 
     &::after {
+        content: '$169.99';
+        text-decoration: line-through;
         font-size: 0.75rem;
         font-family: $sans-serif-font-family;
         color: map-get($neutral, dark-grayish-blue);
+        position: relative;
+        left: 10px;
+        bottom: 5px;
     }
 }
