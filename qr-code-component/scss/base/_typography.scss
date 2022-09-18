@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import '../utils/variables';
 
 body {
     font-family: 'Outfit', sans-serif;
+}
+
+.card div {
+    .title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: $dark-blue;
+        margin: 1rem;
+    }
+
+    .description {
+        font-size: 0.9375rem;
+        font-weight: 400;
+        color: $grayish-blue;
+        margin: 1rem;
+    }
 }
