@@ -1,9 +1,73 @@
 @import 'base/resets', 'base/typography', 'utils/variables', 'components/dropdown';
 
 body {
-    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background: linear-gradient(to bottom, map-get($primary, soft-violet), map-get($primary, soft-blue));
+    position: relative;
 }
 
 .card {
     background-color: white;
+    width: 65rem;
+    height: 32.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1.5rem;
+    padding-right: 3%;
+
+    .hero-img {
+        width: 100%;
+    }
+
+    .accordion {
+        margin: 12%;
+
+        .container {
+            margin: 0.9rem 0;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.active {
+                .label {
+                    font-weight: 700;
+                }
+
+                .arrow-icon {
+                    transform: rotate(180deg);
+                }
+
+                .content {
+                    height: 100%;
+                }
+            } 
+
+            .label {
+                
+                .arrow-icon {
+                    position: relative;
+                    top: 0.45rem;
+                    right: 1rem;
+                    width: 0.75rem;
+                    float: right;
+                }
+            }
+
+            .content {
+                height: 0;
+                overflow: hidden;
+            }
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid map-get($neutral, light-grayish-blue);
+            margin: 0;
+        }
+    }
 }
