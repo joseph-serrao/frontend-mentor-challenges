@@ -85,15 +85,17 @@ h1 {
 }
 .container .label {
   color: hsl(237deg, 12%, 33%);
-  font-size: 0.9rem;
+  font-size: 1rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.container .content {
+.container .content p {
   color: hsl(240deg, 6%, 50%);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  margin-top: 0.55rem;
+  padding-right: 2.25rem;
 }
 
 body {
@@ -103,8 +105,9 @@ body {
 
 .card {
   background-color: white;
-  width: 65rem;
-  height: 32.5rem;
+  max-width: 90%;
+  width: 63.5rem;
+  height: 35rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,11 +118,36 @@ body {
   border-radius: 1.5rem;
   padding-right: 3%;
 }
-.card .hero-img {
+.card .images .box-img--desktop {
+  max-width: 100%;
+  position: absolute;
+  top: 14rem;
+  left: -7.5rem;
+  z-index: 2;
+}
+.card .images .wrapper {
+  position: relative;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.card .images .wrapper .img--desktop {
+  max-width: 100%;
+  width: 30rem;
+  position: absolute;
+  top: 5.5rem;
+  left: -5.5rem;
+  z-index: 1;
+}
+.card .images .wrapper .bg-img--desktop {
+  max-width: none;
+  width: 55rem;
+  position: absolute;
+  top: -13rem;
+  left: -30.5rem;
 }
 .card .accordion {
-  margin: 12%;
+  margin: 15% 8% 15% 0;
 }
 .card .accordion .container {
   margin: 0.9rem 0;
@@ -135,6 +163,9 @@ body {
 }
 .card .accordion .container.active .content {
   height: 100%;
+}
+.card .accordion .container .label:hover {
+  color: hsl(14deg, 88%, 65%);
 }
 .card .accordion .container .label .arrow-icon {
   position: relative;
