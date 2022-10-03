@@ -85,7 +85,7 @@ h1 {
 }
 .container .label {
   color: hsl(237deg, 12%, 33%);
-  font-size: 1rem;
+  font-size: 0.9rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -93,7 +93,7 @@ h1 {
 }
 .container .content p {
   color: hsl(240deg, 6%, 50%);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin-top: 0.55rem;
   padding-right: 2.25rem;
 }
@@ -118,8 +118,10 @@ body {
   border-radius: 1.5rem;
   padding-right: 3%;
 }
-.card .images .box-img--desktop {
-  max-width: 100%;
+.card .images .hidden {
+  display: none;
+}
+.card .images .box-img.desktop {
   position: absolute;
   top: 14rem;
   left: -7.5rem;
@@ -131,20 +133,30 @@ body {
   height: 100%;
   overflow: hidden;
 }
-.card .images .wrapper .img--desktop {
-  max-width: 100%;
+.card .images .wrapper .img.desktop, .card .images .wrapper .desktop.bg-img.mobile {
+  max-width: none;
   width: 30rem;
   position: absolute;
   top: 5.5rem;
   left: -5.5rem;
   z-index: 1;
 }
-.card .images .wrapper .bg-img--desktop {
+.card .images .wrapper .img.mobile, .card .images .wrapper .mobile.bg-img {
+  width: 16.75rem;
+  position: absolute;
+  top: -7.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card .images .wrapper .bg-img.desktop {
   max-width: none;
   width: 55rem;
   position: absolute;
   top: -13rem;
   left: -30.5rem;
+}
+.card .images .wrapper .bg-img.mobile {
+  top: 0rem;
 }
 .card .accordion {
   margin: 15% 8% 15% 0;
@@ -182,4 +194,44 @@ body {
   border: 0;
   border-top: 1px solid hsl(240deg, 5%, 91%);
   margin: 0;
+}
+
+@media screen and (max-width: 945px) {
+  .card .images .box-img.desktop {
+    width: 8rem;
+    top: 15rem;
+    left: -5.25rem;
+  }
+  .card .images .wrapper .img.desktop, .card .images .wrapper .desktop.bg-img.mobile {
+    width: 24.5rem;
+    top: 7rem;
+  }
+  .card .images .wrapper .bg-img.desktop {
+    width: 47rem;
+    top: -9.75rem;
+    left: -28rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .card {
+    grid-template-columns: none;
+    grid-template-rows: 25% 75%;
+    padding: 0;
+    height: 36rem;
+  }
+  .card .images .wrapper {
+    overflow: visible;
+  }
+  .card .accordion {
+    margin: 0 6% 12% 6%;
+  }
+  .card .accordion h1 {
+    text-align: center;
+  }
+  .card .accordion .label {
+    font-size: 0.875rem;
+  }
+  .card .accordion .content p {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

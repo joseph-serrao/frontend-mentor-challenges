@@ -21,10 +21,12 @@ body {
     padding-right: 3%;
 
     .images {
-        
 
-        .box-img--desktop {
-            max-width: 100%;
+        .hidden {
+            display: none;
+        }
+
+        .box-img.desktop {
             position: absolute;
             top: 14rem;
             left: -7.5rem;
@@ -37,21 +39,39 @@ body {
             height: 100%;
             overflow: hidden;
 
-            .img--desktop {
-                max-width: 100%;
-                width: 30rem;
-                position: absolute;
-                top: 5.5rem;
-                left: -5.5rem;
-                z-index: 1;
+            .img {
+                
+                &.desktop {
+                    max-width: none;
+                    width: 30rem;
+                    position: absolute;
+                    top: 5.5rem;
+                    left: -5.5rem;
+                    z-index: 1;
+                }
+
+                &.mobile {
+                    width: 16.75rem;
+                    position: absolute;
+                    top: -7.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
     
-            .bg-img--desktop {
-                max-width: none;
-                width: 55rem;
-                position: absolute;
-                top: -13rem;
-                left: -30.5rem;
+            .bg-img {
+                &.desktop {
+                    max-width: none;
+                    width: 55rem;
+                    position: absolute;
+                    top: -13rem;
+                    left: -30.5rem;
+                }
+
+                &.mobile {
+                    @extend .img, .mobile;
+                    top: 0rem;
+                }
             }
         }
     }
@@ -104,6 +124,62 @@ body {
             border: 0;
             border-top: 1px solid map-get($neutral, light-grayish-blue);
             margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .card .images {
+
+        .box-img.desktop {
+            width: 8rem;
+            top: 15rem;
+            left: -5.25rem;
+        }
+
+        .wrapper { 
+            .img.desktop {
+                width: 24.5rem;
+                top: 7rem;
+            }
+    
+            .bg-img.desktop {
+                width: 47rem;
+                top: -9.75rem;
+                left: -28rem;
+            }
+    
+        }
+    }      
+}
+
+@media screen and (max-width: 720px) {
+    .card {
+        grid-template-columns: none;
+        grid-template-rows: 25% 75%;
+        padding: 0;
+        height: 36rem;
+
+        .images {
+            .wrapper {
+                overflow: visible;
+            }
+        }
+        
+        .accordion {
+            margin: 0 6% 12% 6%;
+
+            h1 {
+                text-align: center;
+            }
+
+            .label {
+                font-size: 0.875rem;
+            }
+
+            .content p {
+                font-size: 0.5rem;
+            }
         }
     }
 }
