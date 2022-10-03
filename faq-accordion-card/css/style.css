@@ -84,7 +84,7 @@ h1 {
   font-family: "Kumbh Sans", sans-serif;
 }
 .container .label {
-  color: hsl(237deg, 12%, 33%);
+  color: #4a4b5e;
   font-size: 0.9rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -92,14 +92,14 @@ h1 {
           user-select: none;
 }
 .container .content p {
-  color: hsl(240deg, 6%, 50%);
+  color: #787887;
   font-size: 0.75rem;
   margin-top: 0.55rem;
   padding-right: 2.25rem;
 }
 
 body {
-  background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
   position: relative;
 }
 
@@ -177,7 +177,7 @@ body {
   height: 100%;
 }
 .card .accordion .container .label:hover {
-  color: hsl(14deg, 88%, 65%);
+  color: #f57c57;
 }
 .card .accordion .container .label .arrow-icon {
   position: relative;
@@ -192,7 +192,7 @@ body {
 }
 .card .accordion hr {
   border: 0;
-  border-top: 1px solid hsl(240deg, 5%, 91%);
+  border-top: 1px solid #e7e7e9;
   margin: 0;
 }
 
@@ -227,11 +227,5 @@ body {
   }
   .card .accordion h1 {
     text-align: center;
-  }
-  .card .accordion .label {
-    font-size: 0.875rem;
-  }
-  .card .accordion .content p {
-    font-size: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
